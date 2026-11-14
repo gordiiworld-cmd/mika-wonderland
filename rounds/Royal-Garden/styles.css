@@ -863,3 +863,10 @@ p {
 /* Keep the user's original placeholder visible while a video is missing. */
 #round6-video-shell #garden-video { position: relative; z-index: 1; }
 #round6-video-shell #garden-video-placeholder { z-index: 2; pointer-events: none; }
+.round6-wake-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 24px auto 0;
+}

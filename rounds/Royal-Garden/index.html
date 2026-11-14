@@ -34,10 +34,7 @@
             Your browser does not support video playback.
           </video>
           <!-- Only Round 6 controls, overlaid on the existing video shell. -->
-          <div class="round6-video-actions" aria-live="polite">
-            <button id="wake-up-button" type="button" class="w-button w-button-main" hidden>WAKE UP!</button>
-            <button id="replay-round6-button" type="button" class="w-button w-button-main" hidden>PLAY AGAIN</button>
-          </div>
+          
           <button id="round6-play-with-sound" type="button" class="w-button w-button-main" hidden>▶ PLAY VIDEO WITH SOUND</button>
         </div>
 
@@ -66,7 +63,12 @@
           </button>
         </div>
         <p id="word-feedback" class="w-feedback" aria-live="polite"></p>
-
+        
+        <div class="round6-wake-bottom" aria-live="polite">
+          <button id="wake-up-button" type="button" class="w-button w-button-main" hidden>WAKE UP!</button>
+            <button id="replay-round6-button" type="button" class="w-button w-button-main" hidden>PLAY AGAIN</button>
+        </div>
+            
         <p class="w-game-footer">New Story · Wonderland Dream · Royal Garden</p>
       </div>
     </section>
