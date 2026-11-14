@@ -12,31 +12,26 @@ document.addEventListener("DOMContentLoaded", () => {
     if (testTrigger) testTrigger.style.display = "none";
   }
 
-  // Automatically reveal the "Help me!" button when the video finishes playing
   if (introVideo) {
     introVideo.addEventListener("ended", showHelpButton);
   }
 
-  // Prototype test button trigger
   if (testTrigger) {
     testTrigger.addEventListener("click", showHelpButton);
   }
 
-  // Open the big rules window
   if (helpBtn) {
     helpBtn.addEventListener("click", () => {
       rulesModal.classList.add("open");
     });
   }
 
-  // Close modal via X button
   if (closeRulesBtn) {
     closeRulesBtn.addEventListener("click", () => {
       rulesModal.classList.remove("open");
     });
   }
 
-  // Close modal when clicking outside the window backdrop
   if (rulesModal) {
     rulesModal.addEventListener("click", (e) => {
       if (e.target === rulesModal) {

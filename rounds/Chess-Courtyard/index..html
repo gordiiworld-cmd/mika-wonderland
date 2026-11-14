@@ -1,104 +1,162 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex,nofollow,noarchive">
-  <meta name="theme-color" content="#4A5568">
-  <title>Round 05 — Chess Courtyard | Wonderland Dream</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="game.js" defer></script>
-</head>
-<body class="w-game" data-round="chess-courtyard">
-  <a class="skip" href="#round-content">Skip to challenge</a>
-  <header class="w-header game-header"><div class="w-wrap w-header-inner">
-    <div class="w-wordmark" aria-label="New Story">NEW <strong>STORY</strong><small>Make It a Story.</small></div>
-    <span class="w-round-mark">WONDERLAND DREAM · CHESS COURTYARD</span>
-  </div></header>
-  <main id="round-content">
-    <section class="game-intro">
-      <div class="w-wrap game-wrap">
-        <p class="w-eyebrow">THE BATTLE OF MINDS</p>
-        <h1>CHESS <span>COURTYARD</span></h1>
-        <p class="game-sub">The oversized marble pieces block your passage across the board. Outmaneuver the guards and find the winning sequence.</p>
-        
-        <div class="w-game-step">
-          <span>01</span>
-          <div>
-            <h2>Listen to the story</h2>
-            <audio id="myAudio" src="Round4.mp3"></audio>
-            <button class="w-button" id="audio" onclick="playAudio()">Listen</button>
-          </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <meta name="theme-color" content="#4A5568" />
+    <title>Round 05 — Chess Courtyard | Wonderland Dream</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="game.js" defer></script>
+  </head>
+  <body class="w-game" data-round="chess-courtyard">
+    <a class="skip" href="#round-content">Skip to challenge</a>
+    <header class="w-header game-header">
+      <div class="w-wrap w-header-inner">
+        <div class="w-wordmark" aria-label="New Story">
+          NEW <strong>STORY</strong><small>Make It a Story.</small>
         </div>
-
-        <div class="w-game-step"><span>02</span><div><h2>Watch the video</h2></div></div>
-        <div class="w-video-shell" aria-label="Chess Courtyard video player">
-          <div class="w-video-placeholder" id="chess-video-placeholder">
-            <div class="w-play-ring">▶</div>
-            <p>CHESS COURTYARD · STORY VIDEO</p>
-            <small>Once the finished video is added, it will play here.</small>
-          </div>
-          <!-- Removed 'hidden' attribute so the video displays cleanly even if metadata event timing lags -->
-          <video id="chess-video" controls playsinline preload="metadata" aria-label="Chess Courtyard story video">
-            <source src="../../assets/videos/Round5.mp4" type="video/mp4">
-            Your browser does not support video playback.
-          </video>
-        </div>
-
-        <div class="w-game-step">
-          <span>03</span>
-          <div>
-            <h2>Find the correct pieces</h2>
-            <p>Scan the courtyard! 10 chess icons are hidden nearby. Match 5 to the board slots below in the correct order, then submit!</p>
-          </div>
-        </div>
-
-        <!-- Challenge Form Container -->
-        <form id="word-form" style="margin-top: 20px;">
-          <div id="rabbit-answer-board">
-            <div>
-              <input maxlength="1" aria-label="Piece 1" data-index="0" required>
-             
-            </div>
-            <div>
-              <input maxlength="1" aria-label="Piece 2" data-index="1" required>
-              
-            </div>
-            <div>
-              <input maxlength="1" aria-label="Piece 3" data-index="2" required>
-             
-            </div>
-            <div>
-              <input maxlength="1" aria-label="Piece 4" data-index="3" required>
-            
-            </div>
-            <div>
-              <input maxlength="1" aria-label="Piece 5" data-index="4" required>
-            
-            </div>
-            <div>
-              <input maxlength="1" aria-label="Piece 6" data-index="5" required>
-            
-            </div>
-          </div>
-          
-          <div class="w-answer-row" style="margin-top: 30px;">
-            <button type="submit" class="w-button w-button-main" style="width: 100%;">UNLOCK</button>
-          </div>
-          <p id="word-feedback" class="w-feedback" aria-live="polite"></p>
-        </form>
-
-        <!-- Unlocked State -->
-        <div id="unlocked" class="w-unlocked" hidden tabindex="-1">
-          <div class="w-success-spark">♟️</div>
-          <h3>Checkmate! Courtyard Cleared</h3>
-          <p>You have successfully outmaneuvered the board and unlocked the next path.</p>
-          <button type="button" id="reset-round" class="w-reset">Reset Round</button>
-        </div>
-
-        <p class="w-game-footer">New Story · Wonderland Dream · Round 05</p>
+        <span class="w-round-mark">WONDERLAND DREAM · CHESS COURTYARD</span>
       </div>
-    </section>
-  </main>
-</body>
+    </header>
+    <main id="round-content">
+      <section class="game-intro">
+        <div class="w-wrap game-wrap">
+          <p class="w-eyebrow">ROUND 5</p>
+          <h1>CHESS <span>COURTYARD</span></h1>
+
+          <div class="w-game-step">
+            <span>01</span>
+            <div>
+              <h2>Listen to the story on the Quest Card</h2>
+              <audio id="myAudio" src="Round4.mp3"></audio>
+              <button class="w-button" id="audio" onclick="playAudio()">
+                Listen
+              </button>
+            </div>
+          </div>
+
+          <div class="w-game-step">
+            <span>02</span>
+            <div><h2>Watch the Story</h2></div>
+          </div>
+          <div class="w-video-shell" aria-label="Chess Courtyard video player">
+            <div class="w-video-placeholder" id="chess-video-placeholder">
+              <div class="w-play-ring">▶</div>
+              <p>CHESS COURTYARD · STORY VIDEO</p>
+              <small
+                >Once the finished video is added, it will play here.</small
+              >
+            </div>
+            <!-- Removed 'hidden' attribute so the video displays cleanly even if metadata event timing lags -->
+            <video
+              id="chess-video"
+              controls
+              playsinline
+              preload="metadata"
+              aria-label="Chess Courtyard story video"
+            >
+              <source src="../../assets/videos/Round5.mp4" type="video/mp4" />
+              Your browser does not support video playback.
+            </video>
+          </div>
+
+          <div class="w-game-step">
+            <span>03</span>
+            <div>
+              <h2>Crack the Chess Code!</h2>
+              <p>
+                Open Packet #5. Follow the instructions
+                and make one move with each of the 6 chess pieces on the
+                board. After each move, write down the letter shown above the
+                square where the piece lands. Put the letters together in the
+                order of the moves, enter the secret word in the boxes and tap
+                UNLOCK!
+              </p>
+            </div>
+          </div>
+
+          <!-- Challenge Form Container -->
+          <form id="word-form" style="margin-top: 20px">
+            <div id="rabbit-answer-board">
+              <div>
+                <input
+                  maxlength="1"
+                  aria-label="Piece 1"
+                  data-index="0"
+                  required
+                />
+              </div>
+              <div>
+                <input
+                  maxlength="1"
+                  aria-label="Piece 2"
+                  data-index="1"
+                  required
+                />
+              </div>
+              <div>
+                <input
+                  maxlength="1"
+                  aria-label="Piece 3"
+                  data-index="2"
+                  required
+                />
+              </div>
+              <div>
+                <input
+                  maxlength="1"
+                  aria-label="Piece 4"
+                  data-index="3"
+                  required
+                />
+              </div>
+              <div>
+                <input
+                  maxlength="1"
+                  aria-label="Piece 5"
+                  data-index="4"
+                  required
+                />
+              </div>
+              <div>
+                <input
+                  maxlength="1"
+                  aria-label="Piece 6"
+                  data-index="5"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="w-answer-row" style="margin-top: 30px">
+              <button
+                type="submit"
+                class="w-button w-button-main"
+                style="width: 100%"
+              >
+                UNLOCK
+              </button>
+            </div>
+            <p id="word-feedback" class="w-feedback" aria-live="polite"></p>
+          </form>
+
+          <!-- Unlocked State -->
+          <div id="unlocked" class="w-unlocked" hidden tabindex="-1">
+            <div class="w-success-spark">♟️</div>
+            <h3>Checkmate! Courtyard Cleared</h3>
+            <p>
+              You have successfully outmaneuvered the board and unlocked the
+              next path.
+            </p>
+            <button type="button" id="reset-round" class="w-reset">
+              Reset Round
+            </button>
+          </div>
+
+          <p class="w-game-footer">New Story · Wonderland Dream · Round 05</p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

@@ -205,7 +205,7 @@ h1 span {
   opacity: 1;
 }
 
-/* Big Rules Modal Popup */
+/* Rules Modal Popup & 6-Step Grid Styling */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -228,16 +228,14 @@ h1 span {
 
 .rules-window {
   width: 100%;
-  max-width: 680px;
-  min-height: 420px;
+  max-width: 720px;
   background: linear-gradient(160deg, #1b1626 0%, #111 100%);
   border: 2px solid var(--violet);
   border-radius: 22px;
-  padding: 36px;
+  padding: 30px;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 40px rgba(164, 128, 220, 0.3);
   transform: scale(0.88) translateY(25px);
   transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -249,17 +247,33 @@ h1 span {
 
 .modal-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   padding-bottom: 16px;
 }
 
+.rules-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: var(--mint);
+  margin-bottom: 4px;
+}
+
 .modal-header h2 {
   font-family: Georgia, serif;
-  font-size: 32px;
+  font-size: 28px;
   margin: 0;
   color: var(--lime);
+  letter-spacing: -0.02em;
+}
+
+.rules-subtitle {
+  font-size: 13px;
+  color: #ccc;
+  margin: 4px 0 0;
 }
 
 .close-modal {
@@ -282,39 +296,125 @@ h1 span {
   color: var(--black);
 }
 
-.rules-placeholder-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 20px;
-  color: var(--mint);
-  border: 1px dashed rgba(192, 233, 217, 0.25);
-  border-radius: 14px;
-  margin: 24px 0;
+/* 6-Step Quest Grid with Centered Text Alignment */
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+  max-height: 50vh;
+  overflow-y: auto;
+  padding-right: 4px;
 }
 
-.modal-footer {
+.rule-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 14px 16px;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center; /* Centers children horizontally */
+  text-align: center;   /* Centers text inside the card */
+  gap: 4px;
+  transition: background 0.2s, border-color 0.2s;
+  
+}
+
+.rule-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(192, 233, 217, 0.3);
+}
+
+.rule-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Spans full width so space-between keeps number left and icon right */
+}
+
+.rule-num {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--mint);
+}
+
+.rule-icon {
+  font-size: 15px;
+  color: var(--lime);
+}
+
+.rule-card h3 {
+  color: #fc67b4;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  margin: 2px 0 0;
+
+  letter-spacing: -0.02em;
+}
+
+.rule-card p {
+  font-size: 12px;
+  color: #aaa;
+  margin: 0;
+}
+
+/* Bottom Callout Banner */
+.modal-footer-banner {
+  background: var(--lime);
+  color: var(--black);
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 6px;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-text strong {
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.banner-text span {
+  font-size: 12px;
+  opacity: 0.85;
 }
 
 .start-adventure-btn {
-  background: var(--lime);
-  color: var(--black);
+  background: var(--black);
+  color: var(--white);
   font-weight: 850;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  cursor: pointer;
+  padding: 11px 18px;
+  border-radius: 10px;
+  font-size: 13px;
   text-decoration: none;
+  white-space: nowrap;
   transition: background 0.2s, transform 0.2s;
 }
 
 .start-adventure-btn:hover {
-  background: var(--mint);
+  background: #222;
   transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .rules-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-footer-banner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .start-adventure-btn {
+    text-align: center;
+  }
 }

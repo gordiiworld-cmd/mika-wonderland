@@ -6,6 +6,9 @@
   <meta name="robots" content="noindex,nofollow,noarchive">
   <meta name="theme-color" content="#111111">
   <title>Welcome to Wonderland Dream | New Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="intro.js" defer></script>
 </head>
@@ -13,14 +16,14 @@
 
   <header class="w-header">
     <div class="w-wrap w-header-inner">
-      <div class="w-wordmark">NEW <strong>STORY</strong><small>Make It a Story.</small></div>
-      <span class="w-badge">WONDERLAND DREAM</span>
+      <div class="w-wordmark">NEW <strong>STORY</strong><small>YOU A'IN</small></div>
+      <span class="w-badge">WONDERLAND DREAM · PROLOGUE </span>
     </div>
   </header>
 
   <main class="intro-stage">
     <div class="w-wrap" style="display: flex; flex-direction: column; align-items: center;">
-      <p class="w-eyebrow">A NEW CHAPTER AWAITS</p>
+      <p class="w-eyebrow">THE ADVENTURE BEGINS </p>
       <h1>WONDERLAND <span>DREAM</span></h1>
 
       <!-- Big Centered Video -->
@@ -34,13 +37,11 @@
       <!-- Animated Button Area -->
       <div class="action-area">
         <button id="help-me-btn" class="help-btn" type="button">
-          ✨ Help me!
+          Help me!
         </button>
 
-        <!-- Prototype test button so you can test the animation without waiting for a video -->
-        <button id="test-trigger" class="dev-skip" type="button">
-          [Prototype Test: Simulate Video Ending]
-        </button>
+        <!-- Prototype test button -->
+        
       </div>
     </div>
   </main>
@@ -49,17 +50,78 @@
   <div id="rules-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="rules-title">
     <div class="rules-window">
       <div class="modal-header">
-        <h2 id="rules-title">Before You Begin</h2>
+        <div>
+          
+          <h2 id="rules-title">HELP ALICE!</h2>
+          <p class="rules-subtitle">HOW TO PLAY</p>
+        </div>
         <button id="close-rules" class="close-modal" type="button" aria-label="Close rules">&times;</button>
       </div>
 
-      <div class="rules-placeholder-body">
-        <p style="font-size: 18px; margin-bottom: 6px; font-weight: 700;">Rules Area</p>
-        <small style="opacity: 0.75;">(Your game rules and instructions will go right here)</small>
+      <!-- 6-Step Rules Grid -->
+      <div class="rules-grid">
+        <div class="rule-card">
+          <div class="rule-card-top">
+            <span class="rule-num">01</span>
+
+          </div>
+          <h3>READ</h3>
+          <p>Your Quest Card</p>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-card-top">
+            <span class="rule-num">02</span>
+  
+          </div>
+          <h3>SCAN</h3>
+          <p>The QR code</p>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-card-top">
+            <span class="rule-num">03</span>
+
+          </div>
+          <h3>WATCH</h3>
+          <p>The story</p>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-card-top">
+            <span class="rule-num">04</span>
+   
+          </div>
+          <h3>DISCOVER</h3>
+          <p>Your mission</p>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-card-top">
+            <span class="rule-num">05</span>
+
+          </div>
+          <h3>SOLVE</h3>
+          <p>The challenge</p>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-card-top">
+            <span class="rule-num">06</span>
+    
+          </div>
+          <h3>UNLOCK</h3>
+          <p>The next chapter</p>
+        </div>
       </div>
 
-      <div class="modal-footer">
-        
+      <!-- Bottom Callout Banner -->
+      <div class="modal-footer-banner">
+        <div class="banner-text">
+          <strong>LET'S BEGIN!</strong>
+          <span>TAKE YOUR FIRST QUEST CARD AND START YOUR JOURNEY!</span>
+        </div>
+       
       </div>
     </div>
   </div>
