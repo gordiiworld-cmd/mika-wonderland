@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#A480DC">
+  <title>Round 01 — Rabbit Hole | Wonderland Dream</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="game.js" defer></script>
+</head>
+<body class="w-game" data-round="rabbit-hole">
+  <a class="skip" href="#round-content">Skip to challenge</a>
+  <header class="w-header game-header"><div class="w-wrap w-header-inner">
+    <div class="w-wordmark" aria-label="New Story">NEW <strong>STORY</strong><small>Make It a Story.</small></div>
+    <span class="w-round-mark">WONDERLAND DREAM · CHAPTER 01 / 06</span>
+  </div></header>
+  <main id="round-content">
+    <section class="game-intro">
+      <div class="w-wrap game-wrap">
+        <p class="w-eyebrow">THE ADVENTURE BEGINS</p>
+        <h1>RABBIT <span>HOLE</span></h1>
+        <p class="game-sub">The White Rabbit has lost control of his own shadow. Can you find the real trail before it is too late?</p>
+        
+        <div class="w-game-step">
+          <span>01</span>
+          <div>
+            <h2>Listen to the story</h2>
+            <audio id="myAudio" src="Round1.mp3"></audio>
+            <button class="w-button" id="audio" onclick="playAudio()">Listen</button>
+          </div>
+        </div>
+
+        <div class="w-game-step"><span>02</span><div><h2>Watch the video</h2></div></div>
+        <div class="w-video-shell" aria-label="White Rabbit video player">
+          <div class="w-video-placeholder" id="rabbit-video-placeholder">
+            <div class="w-play-ring">▶</div>
+            <p>WHITE RABBIT · STORY VIDEO</p>
+            <small>Once the finished video is added, it will play here.</small>
+          </div>
+          <video id="rabbit-video" controls playsinline preload="metadata" aria-label="Rabbit Hole story video" hidden>
+            <source src="../../assets/videos/Round1.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+        </div>
+
+        <div class="w-game-step">
+          <span>03</span>
+          <div>
+            <h2>Find the correct shadows</h2>
+            <p>Look around you! 10 Rabbit shadows are hiding nearby. Find them and match 5 to the shadows below! Enter the letters in the correct order, then tap the button!</p>
+          </div>
+        </div>
+
+        <!-- Challenge Form Container -->
+        <form id="word-form" style="margin-top: 20px;">
+          <div id="rabbit-answer-board">
+            <div>
+              <input maxlength="1" aria-label="Letter 1" data-index="0" required>
+              <img src="shadow-1.svg" alt="Rabbit shadow 1">
+            </div>
+            <div>
+              <input maxlength="1" aria-label="Letter 2" data-index="1" required>
+              <img src="shadow-2.png" alt="Rabbit shadow 2">
+            </div>
+            <div>
+              <input maxlength="1" aria-label="Letter 3" data-index="2" required>
+              <img src="shadow-3.svg" alt="Rabbit shadow 3">
+            </div>
+            <div>
+              <input maxlength="1" aria-label="Letter 4" data-index="3" required>
+              <img src="shadow-4.svg" alt="Rabbit shadow 4">
+            </div>
+            <div>
+              <input maxlength="1" aria-label="Letter 5" data-index="4" required>
+              <img src="shadow-5.png" alt="Rabbit shadow 5">
+            </div>
+          </div>
+          
+          <div class="w-answer-row" style="margin-top: 30px;">
+            <button type="submit" class="w-button w-button-main" style="width: 100%;">UNLOCK</button>
+          </div>
+          <p id="word-feedback" class="w-feedback" aria-live="polite"></p>
+        </form>
+
+        <!-- Unlocked State -->
+        <div id="unlocked" class="w-unlocked" hidden tabindex="-1">
+          <div class="w-success-spark">✨</div>
+          <h3>Round Unlocked!</h3>
+          <p>You've successfully tracked down the White Rabbit's shadow.</p>
+          <button type="button" id="reset-round" class="w-reset">Reset Round</button>
+        </div>
+
+        <p class="w-game-footer">New Story · Wonderland Dream · Round 01</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
