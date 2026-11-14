@@ -23,16 +23,22 @@
        
 
        
-        <div class="w-video-shell" aria-label="Royal Garden video player">
+        <div class="w-video-shell" id="round6-video-shell" aria-label="Royal Garden video player">
           <div class="w-video-placeholder" id="garden-video-placeholder">
             <div class="w-play-ring">▶</div>
-            <p>ROYAL GARDEN · STORY VIDEO</p>
-            <small>Once the finished video is added, it will play here.</small>
+            <p id="video-caption">ROYAL GARDEN · STORY VIDEO</p>
+            <small id="video-help">Once the finished video is added, it will play here.</small>
           </div>
           <video id="garden-video" controls playsinline preload="metadata" aria-label="Royal Garden story video">
             <source src="../../assets/videos/Round6.mp4" type="video/mp4">
             Your browser does not support video playback.
           </video>
+          <!-- Only Round 6 controls, overlaid on the existing video shell. -->
+          <div class="round6-video-actions" aria-live="polite">
+            <button id="wake-up-button" type="button" class="w-button w-button-main" hidden>WAKE UP!</button>
+            <button id="replay-round6-button" type="button" class="w-button w-button-main" hidden>PLAY AGAIN</button>
+          </div>
+          <button id="round6-play-with-sound" type="button" class="w-button w-button-main" hidden>▶ PLAY VIDEO WITH SOUND</button>
         </div>
 
         <div class="w-game-step">
@@ -44,36 +50,22 @@
           </div>
         </div>
 
-        <!-- Challenge Form Container -->
-        <form id="word-form" style="margin-top: 20px;">
-          <div id="rabbit-answer-board">
-            <div>
-              
-              <img src="key_base_01.svg" alt="Crest 1">
-            </div>
-            <div>
-              
-              <img src="key_base_02.svg" alt="Crest 2">
-            </div>
-            <div>
-              
-              <img src="key_base_03.svg" alt="Crest 3">
-            </div>
-            <div>
-              
-              <img src="key_base_04.svg" alt="Crest 4">
-            </div>
-            
-          </div>
-          
-          <div class="w-answer-row" style="margin-top: 30px;">
-            <button type="submit" class="w-button w-button-main">Wake Up!</button>
-          </div>
-          <p id="word-feedback" class="w-feedback" aria-live="polite"></p>
-        </form>
-
-        <!-- Unlocked State -->
-        
+        <!-- The original four key silhouettes, without cards or visible button frames. -->
+        <div id="rabbit-answer-board" class="round6-key-board" role="group" aria-label="Choose one of four keys">
+          <button class="round6-key" type="button" data-key="1" aria-label="Key 1 — diamond">
+            <img src="key_base_01.png" alt="Diamond key">
+          </button>
+          <button class="round6-key" type="button" data-key="2" aria-label="Key 2 — heart">
+            <img src="key_base_03.png" alt="Heart key">
+          </button>
+          <button class="round6-key" type="button" data-key="3" aria-label="Key 3 — club">
+            <img src="key_base_02.png" alt="Club key">
+          </button>
+          <button class="round6-key" type="button" data-key="4" aria-label="Key 4 — spade">
+            <img src="key_base_04.png" alt="Spade key">
+          </button>
+        </div>
+        <p id="word-feedback" class="w-feedback" aria-live="polite"></p>
 
         <p class="w-game-footer">New Story · Wonderland Dream · Royal Garden</p>
       </div>

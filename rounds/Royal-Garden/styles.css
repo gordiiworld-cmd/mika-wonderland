@@ -770,3 +770,96 @@ p {
     scroll-behavior: auto;
   }
 }
+/* ========= Round 6 only: interactive keys and centered video actions =========
+   Everything above is the original stylesheet, unchanged. The classes below are
+   scoped to the sixth round and do not affect previous rounds. */
+#rabbit-answer-board.round6-key-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  justify-items: center;
+  gap: clamp(10px, 1.8vw, 18px);
+  width: 100%;
+  margin: 28px auto 10px;
+}
+.round6-key {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 76px;
+  padding: 5px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: transform .18s ease, opacity .18s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+/* Overrule old Rabbit Hole input/small-image rules only for the key images. */
+#rabbit-answer-board.round6-key-board .round6-key img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  object-fit: contain;
+  opacity: 1;
+  filter: drop-shadow(0 6px 12px #0005);
+  transition: filter .18s ease;
+}
+#rabbit-answer-board.round6-key-board .round6-key:hover img,
+#rabbit-answer-board.round6-key-board .round6-key:focus-visible img { opacity: 1; }
+.round6-key:hover:not(:disabled) { transform: scale(1.05); }
+.round6-key:disabled { cursor: default; opacity: .52; }
+.round6-key.round6-selected { opacity: 1; }
+.round6-key.round6-selected img { opacity: 0 !important; }
+.round6-video-actions {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.round6-video-actions .w-button {
+  pointer-events: auto;
+  min-width: 178px;
+  font-size: clamp(18px, 2.5vw, 24px);
+  box-shadow: 0 12px 32px #0008;
+}
+#round6-play-with-sound {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: clamp(12px, 1.6vw, 15px);
+}
+#round6-play-with-sound:hover { transform: translateX(-50%) translateY(-2px); }
+.round6-flying-key {
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px #0009);
+  transform-origin: 50% 50%;
+}
+@media (max-width: 530px) {
+  #rabbit-answer-board.round6-key-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 12px;
+    row-gap: 14px;
+  }
+  .round6-video-actions .w-button { min-width: 145px; font-size: 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .round6-key { transition: none; }
+}
+
+/* Keep the user's original placeholder visible while a video is missing. */
+#round6-video-shell #garden-video { position: relative; z-index: 1; }
+#round6-video-shell #garden-video-placeholder { z-index: 2; pointer-events: none; }
