@@ -8,10 +8,10 @@ const ROUND6 = {
   keyholeTarget: { x: 0.50, y: 0.56 }, // fractions of the displayed video shell
   videoFiles: {
     intro: '../../assets/videos/Round5.mp4',
-    rabbit1: '../../assets/videos/Round5.mp4',
+    rabbit1: '../../assets/videos/WEAK UP ENDING v1.mp4',
     rabbit2: '../../assets/videos/Round5.mp4',
     wakeEnding: '../../assets/videos/Round5.mp4',
-    secretEnding: '../../assets/videos/Round5.mp4'
+    secretEnding: '../../assets/videos/ENDINGrightKey.mov'
   }
 };
 
