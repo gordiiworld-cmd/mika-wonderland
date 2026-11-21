@@ -68,10 +68,13 @@
                 Open Packet #4. Find the ingredients from the four recipes on
                 the clock face. Figure out which number on the clock matches
                 each ingredient, then add up their values for each recipe. Use
-                the alphabet to turn the numbers into letters. Enter the
-                secret word in the boxes, tap UNLOCK, and continue your
-                adventure!
+                the alphabet to turn the numbers into letters. Enter the secret
+                word in the boxes, tap UNLOCK, and continue your adventure!
               </p>
+              <audio id="myTask" src="Task_R4.mpeg"></audio>
+              <button class="w-button" id="audio" onclick="playTask()">
+                Listen to the Task
+              </button>
             </div>
           </div>
 
@@ -127,11 +130,10 @@
           <!-- Unlocked State -->
           <div id="unlocked" class="w-unlocked" hidden tabindex="-1">
             <div class="w-success-spark">⏰</div>
-            <h3>Time Restored! Clock Room Cleared</h3>
-            <p>
-              You have successfully unlocked the mechanism and aligned the hands
-              of time.
-            </p>
+            <h3>Chess Courtyard Unlocked</h3>
+            <p>Grab the Round 5 Quest Card to continue</p>
+            <audio id="End" src="../../assets/videos/end.mpeg"></audio>
+
             <button type="button" id="reset-round" class="w-reset">
               Reset Round
             </button>

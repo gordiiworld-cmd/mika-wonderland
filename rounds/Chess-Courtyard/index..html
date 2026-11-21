@@ -73,6 +73,10 @@
                 order of the moves, enter the secret word in the boxes and tap
                 UNLOCK!
               </p>
+              <audio id="myTask" src="Task_R5.mpeg"></audio>
+              <button class="w-button" id="audio" onclick="playTask()">
+                Listen to the Task
+              </button>
             </div>
           </div>
 
@@ -144,11 +148,10 @@
           <!-- Unlocked State -->
           <div id="unlocked" class="w-unlocked" hidden tabindex="-1">
             <div class="w-success-spark">♟️</div>
-            <h3>Checkmate! Courtyard Cleared</h3>
-            <p>
-              You have successfully outmaneuvered the board and unlocked the
-              next path.
-            </p>
+            <h3>Royal Garden Unlocked</h3>
+            <p>Grab the Round 6 Quest Card to continue</p>
+            <audio id="End" src="../../assets/videos/end.mpeg"></audio>
+
             <button type="button" id="reset-round" class="w-reset">
               Reset Round
             </button>

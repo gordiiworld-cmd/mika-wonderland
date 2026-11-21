@@ -16,6 +16,8 @@
     unlocked.classList.add("w-unlocked-show");
     form.hidden = true;
     feedback.textContent = "";
+    const audio = document.getElementById("End");
+    audio.play();
   }
 
   try {

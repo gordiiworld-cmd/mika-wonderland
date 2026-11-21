@@ -71,6 +71,10 @@
                 5 letters of the code into the boxes in the correct order and
                 tap UNLOCK!
               </p>
+              <audio id="myTask" src="Task_R3.mpeg"></audio>
+              <button class="w-button" id="audio" onclick="playTask()">
+                Listen to the Task
+              </button>
             </div>
           </div>
 
@@ -134,10 +138,9 @@
           <!-- Unlocked State -->
           <div id="unlocked" class="w-unlocked" hidden tabindex="-1">
             <div class="w-success-spark">🫖</div>
-            <h3>Pavilion Unlocked!</h3>
-            <p>
-              You've successfully discovered the secrets of the Tea Pavilion.
-            </p>
+            <h3>Clock Room Unlocked!</h3>
+            <p>Grab the Round 4 Quest Card to continue</p>
+            <audio id="End" src="../../assets/videos/end.mpeg"></audio>
             <button type="button" id="reset-round" class="w-reset">
               Reset Round
             </button>

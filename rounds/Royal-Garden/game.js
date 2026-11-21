@@ -193,3 +193,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Keep the original Round6 video with manual controls on first page load.
   loadClip('intro', { start: false });
 });
+function playTask() {
+  const audio = document.getElementById("myTask");
+  if (audio) audio.play();
+}
