@@ -98,3 +98,7 @@ function playAudio() {
   const audio = document.getElementById("myAudio");
   if (audio) audio.play();
 }
+function playTask() {
+  const audio = document.getElementById("myTask");
+  if (audio) audio.play();
+}
