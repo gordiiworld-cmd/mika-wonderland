@@ -70,11 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (rulesAudio.paused) {
         if (bgMusic) bgMusic.pause();
         rulesAudio.play();
-        listenRulesBtn.textContent = "⏸ Pause";
+        listenRulesBtn.textContent = " Pause";
         listenRulesBtn.classList.add("is-playing");
       } else {
         rulesAudio.pause();
-        listenRulesBtn.textContent = "🔊 Listen";
+        listenRulesBtn.textContent = " Listen";
         listenRulesBtn.classList.remove("is-playing");
         playBgMusic();
       }
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Automatically resume background song when rules audio finishes
     rulesAudio.addEventListener("ended", () => {
-      listenRulesBtn.textContent = "🔊 Listen";
+      listenRulesBtn.textContent = " Listen";
       listenRulesBtn.classList.remove("is-playing");
       playBgMusic();
     });
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
       rulesAudio.pause();
       rulesAudio.currentTime = 0;
       if (listenRulesBtn) {
-        listenRulesBtn.textContent = "🔊 Listen";
+        listenRulesBtn.textContent = " Listen";
         listenRulesBtn.classList.remove("is-playing");
       }
       playBgMusic();
