@@ -20,7 +20,7 @@
       <span class="w-badge">WONDERLAND DREAM · PROLOGUE </span>
     </div>
   </header>
-
+  
   <main class="intro-stage">
     <div class="w-wrap" style="display: flex; flex-direction: column; align-items: center;">
       <p class="w-eyebrow">THE ADVENTURE BEGINS </p>
@@ -49,14 +49,24 @@
   <!-- Big Rules Popup Window -->
   <div id="rules-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="rules-title">
     <div class="rules-window">
-      <div class="modal-header">
-        <div>
-          
-          <h2 id="rules-title">HELP ALICE!</h2>
-          <p class="rules-subtitle">HOW TO PLAY</p>
-        </div>
-        <button id="close-rules" class="close-modal" type="button" aria-label="Close rules">&times;</button>
-      </div>
+      <!-- 1. Add these two audio tags right inside your <body> tag -->
+<audio id="bg-music" src="assets/videos/bg.mpeg" loop preload="auto"></audio>
+<audio id="rules-audio" src="assets/videos/rules.mpeg" preload="auto"></audio>
+
+<!-- 2. Replace your existing .modal-header inside #rules-modal with this -->
+<div class="modal-header">
+  <div>
+    <span class="rules-eyebrow">WONDERLAND DREAM</span>
+    <h2 id="rules-title">HELP ALICE!</h2>
+    <p class="rules-subtitle">Your magical adventure starts here!</p>
+  </div>
+  <div class="modal-header-actions">
+    <button id="listen-rules-btn" class="audio-rules-btn" type="button" aria-label="Listen to rules">
+      🔊 Listen
+    </button>
+    <button id="close-rules" class="close-modal" type="button" aria-label="Close rules">&times;</button>
+  </div>
+</div>
 
       <!-- 6-Step Rules Grid -->
       <div class="rules-grid">

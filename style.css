@@ -418,3 +418,38 @@ h1 span {
     text-align: center;
   }
 }
+/* Modal Header Actions & Audio Toggle Button */
+.modal-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.audio-rules-btn {
+  background: rgba(164, 128, 220, 0.18);
+  border: 1px solid var(--violet);
+  color: var(--mint);
+  font-family: var(--font-small);
+  font-size: var(--size-small);
+  font-weight: 700;
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 99px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.audio-rules-btn:hover {
+  background: var(--violet);
+  color: var(--white);
+}
+
+.audio-rules-btn.is-playing {
+  background: var(--lime);
+  border-color: var(--lime);
+  color: var(--black);
+}
